@@ -1,18 +1,18 @@
-blazecoin-php
+bdcashAPI-php
 =============
 
-A basic PHP library for interacting with blazecoind - http://api.blazeco.in
+A basic PHP library for interacting with bigdatacashd - http://api.bigdatacash.online
 
 I plan to expand upon the end points of the API.  Right now accounts and movement of coins is working.
 
-*Notes:* You can follow along (and suggest... please do) which API endpoints I work on next.  Head to the [issues area](https://github.com/wpstudio/blazecoin-php/issues) to contribute or to see what upcoming endpoints will be added to this api.
+*Notes:* You can follow along (and suggest... please do) which API endpoints I work on next.  Head to the [issues area](https://github.com/bdcashdev/bdcashAPI-php/issues) to contribute or to see what upcoming endpoints will be added to this api.
 
 
 ## Requirements
 
-Requires **blazecoind** to already be installed and running on your local server or reachable by your server.
+Requires **bigdatacashd** to already be installed and running on your local server or reachable by your server.
 
-Get blazecoin source from: https://github.com/wpstudio/blazecoin
+Get Bigdatacash source from: https://github.com/bdcashdev/BigdataCash
 
 
 ## Usage:
@@ -20,26 +20,26 @@ Get blazecoin source from: https://github.com/wpstudio/blazecoin
 Example use, see examples.php for more
 
 ```
-require "./Blaze.php";
+require "./api.php";
 
 $config = array(
-    'user' => 'blazecoinrpc',
+    'user' => 'bdcashrpc',
     'pass' => '--password--',
     'host' => '127.0.0.1',
     'port' => '55413' );
 
 // create client conncetion
-$blaze = new Blaze( $config );
+$bdcash = new Bdcash( $config );
 
 // create a new address
-$address = $blaze->get_address( 'name' );
+$address = $bdcash->get_address( 'name' );
 print( $address );
 
 // check balance
-print( "name: " . $blaze->get_balance( 'name' ) );
+print( "name: " . $bdcash->get_balance( 'name' ) );
 
 // send money externally (withdraw)
-$blaze->send( 'name', 'BU6tjT9keTxpKBixzwujsX9w9AKL6J6LJe', 100 );
+$bdcash->send( 'name', 'BU6tjT9keTxpKBixzwujsX9w9AKL6J6LJe', 100 );
 
 ```
 
