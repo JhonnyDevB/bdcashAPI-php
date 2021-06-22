@@ -2,7 +2,7 @@
 
 ## Simple command-line script to show examples
 
-require "./Blaze.php";
+require "./api.php";
 
 $config = array(
     'user' => 'blazecoinrpc',
@@ -30,5 +30,5 @@ $blaze->move( 'name2', 'name', 10000 );
 
 // send money externally (withdraw)
 // send from account to external address
-$blaze->send( 'name', 'BU6tjT9keTxpKBixzwujsX9w9AKL6J6LJe', 100 );
+$blaze->send( 'name', '8U6tjT9keTxpKBixzwujsX9w9AKL6J6LJe', 100 );
 
