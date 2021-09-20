@@ -1,11 +1,11 @@
 <?php
 
 /**
- * Project : blazecoin-php library
- * Summary : A basic php library to talk with blazecoind
+ * Project : bigdatacash-php library
+ * Summary : A basic php library to talk with bigdatacashd
  *
  * Original Source  : https://github.com/mkaz/php-doge
- * Source  : https://github.com/wpstudio/blazecoin-php
+ * Source  : https://github.com/wpstudio/bigdatacash-php
  *
  * Original Author  : Marcus Kazmierczak (@mkaz)
  * Author  :  Benjamin Bradley (wpstudio)
@@ -37,12 +37,12 @@ class Bdcash  {
 
 
     /**
-     * Creates or Retrievs a blazecoin address for a account name
+     * Creates or Retrievs a bigdatacash address for a account name
      * An account is just a string used as key to identify account,
-     * A blazecoin address is return which can receive coins
+     * A bigdatacash address is return which can receive coins
      *
      * @param string $account some string used as key to account
-     * @return string blazecoin address
+     * @return string bigdatacash address
      */
     function get_address( $account ) {
         return $this->client->getaccountaddress( $account );
@@ -50,9 +50,9 @@ class Bdcash  {
 
 
     /**
-     * Given a blazecoin address returns the account name
+     * Given a bigdatacash address returns the account name
      *
-     * @param string $address blazecoin addresss
+     * @param string $address bigdatacash addresss
      * @return string account name key
      */
     function get_account( $address ) {
@@ -65,7 +65,7 @@ class Bdcash  {
      * account name for further API use.
      *
      * @param string $account account name
-     * @return string blazecoin address
+     * @return string bigdatacash address
      */
     function get_new_address( $account='' ) {
         return $this->client->getnewaddress( $account );
@@ -73,7 +73,7 @@ class Bdcash  {
 
 
     /**
-     * Get list of all accounts on in this blazecoind wallet
+     * Get list of all accounts on in this bigdatacashd wallet
      *
      * @return array strings of account => balance
      */
@@ -83,9 +83,9 @@ class Bdcash  {
 
 
     /**
-     * Associate blazecoin address to account string
+     * Associate bigdatacash address to account string
      *
-     * @param string $address blazecoin address
+     * @param string $address bigdatacash address
      * @param string $account account string
      */
     function set_account( $address, $account ) {
@@ -113,7 +113,7 @@ class Bdcash  {
 
     /**
      * Move coins from one account on wallet to another
-     * Both accounts are local to this blazecoind instance
+     * Both accounts are local to this bigdatacashd instance
      *
      * @param string $account_from account moving from
      * @param string $account_to account moving to
@@ -126,10 +126,10 @@ class Bdcash  {
 
 
     /**
-     * Send coins to any blazecoin Address
+     * Send coins to any bigdatacash Address
      *
      * @param string $account account sending coins from
-     * @param string $to_address blazecoin address sending to
+     * @param string $to_address bigdatacash address sending to
      * @param float $amount amount of coins to send
      * @return string txid
      */
@@ -139,7 +139,7 @@ class Bdcash  {
     }
 
     /**
-     * Pull Coin Mining Information from blazecoin community
+     * Pull Coin Mining Information from bigdatacash community
      *
      * Get current block number, current difficulty, current network hash rate
      */
@@ -151,7 +151,7 @@ class Bdcash  {
      }
 
      /**
-      * Returns the transaction history of a specific blazecoin account
+      * Returns the transaction history of a specific bigdatacash account
       *
       * @param string $account account pulling transaction history
       */
