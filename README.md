@@ -1,7 +1,7 @@
 bdcashAPI-php
 =============
 
-A basic PHP library for interacting with bigdatacashd - http://api.bigdatacash.online
+A basic PHP library for interacting with bigdatacashd - http://api.bigdatacash.org
 
 I plan to expand upon the end points of the API.  Right now accounts and movement of coins is working.
 
@@ -12,7 +12,7 @@ I plan to expand upon the end points of the API.  Right now accounts and movemen
 
 Requires **bigdatacashd** to already be installed and running on your local server or reachable by your server.
 
-Get Bigdatacash source from: https://github.com/bdcashdev/BigdataCash
+Get Bigdatacash source from: https://github.com/bdcashdev/BigdataCash/releases
 
 
 ## Usage:
